@@ -26,7 +26,7 @@ function calcularMDC(a, b) {
 }
 
 rl.question('Digite o primeiro número: ', (num1) => {
-    rl.question('Digite o segundo número: ', (num2) => {
+    rl.question('Digite o segundo número caralho2: ', (num2) => {
         num1 = parseInt(num1);
         num2 = parseInt(num2);
 
