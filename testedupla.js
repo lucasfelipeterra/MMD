@@ -2,7 +2,7 @@ const readline = require('readline');
 
 const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout,
 });
 
 function calcularMMC(a, b) {
@@ -34,27 +34,17 @@ rl.question('Digite o primeiro número: ', (num1) => {
             console.log('Por favor, insira números válidos.');
         } else {
             const mmc = calcularMMC(num1, num2);
-            console.log(`O MMC de ${num1} e ${num2} é ${mmc}.`);
         }
-        
-        // rl.close();
-        
-        rl.question('Digite o primeiro número: ', (num1) => {
-            rl.question('Digite o segundo número: ', (num2) => {
-                num1 = parseInt(num1);
-                num2 = parseInt(num2);
-                
-                if (isNaN(num1) || isNaN(num2)) {
-                    console.log('Por favor, insira números válidos.');
-                } else {
-                    const mmc = calcularMMC(num1, num2);
-                    const mdc = calcularMDC(num1, num2);
-                    console.log(`O MMC de ${num1} e ${num2} é ${mmc}.`);
-                    console.log(`O MDC de ${num1} e ${num2} é ${mdc}.`);
-                }
-                
-                rl.close();
-            });
-        });
-        });
+
+        if (isNaN(num1) || isNaN(num2)) {
+            console.log('Por favor, insira números válidos.');
+        } else {
+            const mmc = calcularMMC(num1, num2);
+            const mdc = calcularMDC(num1, num2);
+            console.log(`O MMC de ${num1} e ${num2} é ${mmc}.`);
+            console.log(`O MDC de ${num1} e ${num2} é ${mdc}.`);
+        }
+
+        rl.close();
+    });
 });
