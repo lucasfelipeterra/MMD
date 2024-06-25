@@ -1,4 +1,4 @@
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -25,19 +25,19 @@ function calcularMDC(a, b) {
     return a;
 }
 
-rl.question("Digite o primeiro número caralho2: ", (num1) => {
-    rl.question("Digite o segundo número: ", (num2) => {
+rl.question('Digite o primeiro número : ', (num1) => {
+    rl.question('Digite o segundo número: ', (num2) => {
         num1 = parseInt(num1);
         num2 = parseInt(num2);
 
         if (isNaN(num1) || isNaN(num2)) {
-            console.log("Por favor, insira números válidos.");
+            console.log('Por favor, insira números válidos.');
         } else {
             const mmc = calcularMMC(num1, num2);
         }
 
         if (isNaN(num1) || isNaN(num2)) {
-            console.log("Por favor, insira números válidos.");
+            console.log('Por favor, insira números válidos.');
         } else {
             const mmc = calcularMMC(num1, num2);
             const mdc = calcularMDC(num1, num2);
